@@ -18,7 +18,9 @@ export default function Register() {
                         <label><input type="radio" name="role" className="mr-1" />Instructor</label>
                     </div>
                 </div>
+                
                 <button className="w-full bg-green-600 hover:bg-green-700 p-3 rounded font-semibold">Sign Up</button>
+                
                 <p className="text-center text-sm text-gray-400">Already have an account? <Link href="/" className="text-blue-400">Log In</Link></p>
             </div>
         </div>
