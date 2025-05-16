@@ -1,6 +1,11 @@
-import Link from 'next/link'
+"use client";
+
+import LoginForm from '@/components/LoginForm';
+import Link from 'next/link';
+import GitHubLogin from '@/components/GithubLogin';
 
 export default function Home() {
+  
   return (
     <div className="flex min-h-screen bg-gray-900 text-white">
       <div className="w-1/2 flex flex-col justify-center items-center p-10">
@@ -12,18 +17,7 @@ export default function Home() {
 
       <div className="w-1/2 flex flex-col justify-center items-center p-10">
         <div className="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-sm space-y-4">
-          <input
-            type="text"
-            placeholder="Email"
-            className="w-full p-3 rounded bg-gray-700 text-white focus:outline-none"
-          />
-          <input
-            placeholder="Password"
-            className="w-full p-3 rounded bg-gray-700 text-white focus:outline-none"
-          />
-          <button className="w-full bg-blue-600 hover:bg-blue-700 p-3 rounded font-semibold">
-            Log In
-          </button>
+          <LoginForm />
           <a href="#" className="text-sm text-blue-400 text-center block">Forgot password?</a>
           <hr className="border-gray-600" />
           <Link href="/register">
@@ -31,9 +25,7 @@ export default function Home() {
               Register
             </button>
           </Link>
-          <button className="w-full bg-gray-700 hover:bg-gray-600 mt-3 p-3 rounded font-semibold flex items-center justify-center space-x-2">
-            <span>Connect with GitHub</span>
-          </button>
+          <GitHubLogin />
         </div>
       </div>
     </div>
