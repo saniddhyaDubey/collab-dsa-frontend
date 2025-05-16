@@ -1,7 +1,11 @@
+"use client";
+
 import LoginForm from '@/components/LoginForm';
 import Link from 'next/link';
+import GitHubLogin from '@/components/GithubLogin';
 
-export default async function Home() {
+export default function Home() {
+  
   return (
     <div className="flex min-h-screen bg-gray-900 text-white">
       <div className="w-1/2 flex flex-col justify-center items-center p-10">
@@ -21,9 +25,7 @@ export default async function Home() {
               Register
             </button>
           </Link>
-          <button className="w-full bg-gray-700 hover:bg-gray-600 mt-3 p-3 rounded font-semibold flex items-center justify-center space-x-2">
-            <span>Connect with GitHub</span>
-          </button>
+          <GitHubLogin />
         </div>
       </div>
     </div>
