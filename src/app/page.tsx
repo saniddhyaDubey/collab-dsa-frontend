@@ -1,6 +1,7 @@
-import Link from 'next/link'
+import LoginForm from '@/components/LoginForm';
+import Link from 'next/link';
 
-export default function Home() {
+export default async function Home() {
   return (
     <div className="flex min-h-screen bg-gray-900 text-white">
       <div className="w-1/2 flex flex-col justify-center items-center p-10">
@@ -12,18 +13,7 @@ export default function Home() {
 
       <div className="w-1/2 flex flex-col justify-center items-center p-10">
         <div className="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-sm space-y-4">
-          <input
-            type="text"
-            placeholder="Email"
-            className="w-full p-3 rounded bg-gray-700 text-white focus:outline-none"
-          />
-          <input
-            placeholder="Password"
-            className="w-full p-3 rounded bg-gray-700 text-white focus:outline-none"
-          />
-          <button className="w-full bg-blue-600 hover:bg-blue-700 p-3 rounded font-semibold">
-            Log In
-          </button>
+          <LoginForm />
           <a href="#" className="text-sm text-blue-400 text-center block">Forgot password?</a>
           <hr className="border-gray-600" />
           <Link href="/register">
