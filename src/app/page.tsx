@@ -12,6 +12,12 @@ export default function Home() {
         <h1 className="text-5xl font-bold text-green-400 mb-4">CollabDSA</h1>
         <p className="text-lg text-gray-300 max-w-md text-center">
           Collaborate. Code. Compete. Learn faster with your peers.
+          <Link href="/learning" className="w-full block">
+          <button className="bg-gray-700 hover:bg-blue-800 mt-2 p-2 w-40 rounded font-medium text-sm flex items-center justify-center space-x-2 mx-auto">
+            <span>What is CollabDSA?</span>
+          </button>
+          </Link>
+
         </p>
       </div>
 

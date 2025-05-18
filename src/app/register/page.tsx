@@ -38,6 +38,7 @@ export default function Register() {
                             <p className="text-red-400 text-sm">{errors.lastName.message}</p>
                         )}
                     </div>
+<<<<<<< HEAD
                     <input {...register("email")} placeholder="Email address" className="w-full p-3 rounded bg-gray-700" />
                     {errors.email && (
                         <p className="text-red-400 text-sm">{errors.email.message}</p>
@@ -48,6 +49,12 @@ export default function Register() {
                     )}
                     <button className="w-full bg-green-600 hover:bg-green-700 p-3 rounded font-semibold">Sign Up</button>
                 </form>
+=======
+                </div>
+                
+                <button className="w-full bg-green-600 hover:bg-green-700 p-3 rounded font-semibold">Sign Up</button>
+                
+>>>>>>> d6df39ef37efa62e1e563369331b39464e29fdab
                 <p className="text-center text-sm text-gray-400">Already have an account? <Link href="/" className="text-blue-400">Log In</Link></p>
             </div>
         </div>
