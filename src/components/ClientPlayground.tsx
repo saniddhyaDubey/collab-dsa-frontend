@@ -4,6 +4,7 @@ import { useState } from "react";
 import CustomInputScreen from "./CustomInputScreen";
 import MonacoCodeEditor from "./MonacoCodeEditor";
 import OutputScreen from "./OutputScreen";
+import axios from "axios";
 
 export default function ClientPlayground(){
 
@@ -11,9 +12,13 @@ export default function ClientPlayground(){
     const [input, setInput] = useState("");
     const [output, setOutput] = useState("");
 
-    const handleRun = () => {
-        // const result = codeCompilation(code, input);
-        setOutput(input);
+    const handleRun = async () => {
+        const response = await axios.post("/api/codeRun", {
+            sourceCode: code, 
+            customInput: input
+        });
+        const { output } = response.data;
+        setOutput(output);
     };
 
     return(
