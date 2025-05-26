@@ -1,5 +1,4 @@
 'use client';
-import Link from "next/link";
 import { useState } from 'react';
 
 export default function Dashboardcontent() {
@@ -47,14 +46,12 @@ export default function Dashboardcontent() {
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl w-full z-10">
         <div className="bg-gray-800 rounded-xl shadow-lg flex flex-col items-center justify-center aspect-square p-6 text-center space-y-4">
-          
           <button
             onClick={() => handleOpenModal('create')}
             className="bg-gray-700 hover:bg-gray-600 px-6 py-3 rounded-lg text-lg font-semibold"
           >
             Create Room
           </button>
-
           <p className="text-sm text-gray-400 max-w-xs">
             Start a new coding session and invite others to join. You'll be the host of the room.
           </p>
@@ -127,14 +124,13 @@ export default function Dashboardcontent() {
                   />
                 </div>
               )}
-              <Link href="/playground">
+
               <button
                 type="submit"
                 className="w-full bg-blue-600 hover:bg-blue-700 p-3 rounded font-semibold"
               >
                 {mode === 'create' ? 'Create Room' : 'Join Room'}
               </button>
-              </Link>
             </form>
           </div>
         </div>
